@@ -4,7 +4,7 @@
 
 ## A logging framework for Erlang/OTP
 
-!SLIDE smbullets
+!SLIDE smbullets incremental
 
 # Levels
 
@@ -17,7 +17,7 @@
 * alert
 * emergency
 
-!SLIDE bullets
+!SLIDE bullets incremental
 
 # Messages
 
@@ -39,7 +39,7 @@ tools such as Splunk.
     @@@ log
     2011-09-06 11:48:50.611 [info] <0.784.0> hello world
 
-!SLIDE bullets
+!SLIDE bullets incremental
 
 # Files
 
@@ -56,7 +56,7 @@ disable logging from `run_erl`).
 
 </div>
 
-!SLIDE bullets
+!SLIDE bullets incremental
 
 # Rotation
 
@@ -70,7 +70,7 @@ the file and continue logging.
 
 </div>
 
-!SLIDE bullets
+!SLIDE bullets incremental
 
 # Additional Features
 
