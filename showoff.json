@@ -1,1 +1,12 @@
-{ "name": "My Preso", "sections": [ {"section":"one"} ]}
+{
+  "name": "Riak 1.0 Preview",
+  "sections": [
+    {"section":"01_introduction"},
+    {"section":"02_lager"},
+    {"section":"03_search"},
+    {"section":"04_backends"},
+    {"section":"05_pipe"},
+    {"section":"06_2i"},
+    {"section":"07_ring"}
+  ]
+}
