@@ -4,7 +4,15 @@
 
 ## A logging framework for Erlang/OTP
 
-!SLIDE smbullets incremental
+<div class="notes hidden">
+
+Its purpose is to provide a more traditional way to perform logging in
+an erlang application that plays nicely with traditional UNIX logging
+tools like logrotate and syslog.
+
+</div>
+
+!SLIDE smbullets
 
 # Levels
 
@@ -34,10 +42,14 @@ tools such as Splunk.
 
 !SLIDE code small center
 
-# Messages
-
     @@@ log
     2011-09-06 11:48:50.611 [info] <0.784.0> hello world
+
+<div class="notes hidden">
+
+timestamp [log level] <pid> message
+
+</div>
 
 !SLIDE bullets incremental
 
@@ -66,9 +78,17 @@ disable logging from `run_erl`).
 <div class="notes hidden">
 
 If a log file is moved or deleted, Lager will reopen or recreate
-the file and continue logging.
+the file and continue logging. A manual rotation process might look as
+follows:
+
+    mv error.log error.log.$(date +%Y%m%d)
 
 </div>
+
+!SLIDE code small center
+
+    @@@ sh
+    mv error.log error.log.$(date +%Y%m%d)
 
 !SLIDE bullets incremental
 
@@ -76,3 +96,17 @@ the file and continue logging.
 
 * Built-in log rotation
 * Runtime log level changes
+
+<div class="notes hidden">
+
+Built-in log rotation requires a simple change to app.config.
+
+Runtime log level changes require attaching to the console and issuing
+erlang commands.
+
+There is also the backend
+[lager_syslog](https://github.com/basho/lager_syslog) that allows
+lager to send messages to syslog. This backend, however, is not
+bundled with Riak and would require less than trivial steps to enable.
+
+</div>
