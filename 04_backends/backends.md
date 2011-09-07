@@ -8,7 +8,7 @@
 
 !SLIDE bullets incremental
 
-# Bigger Data
+# Problem: Big Data
 
 * Bitcask is fast but RAM-hungry
 * Innostore has license problems...
@@ -18,7 +18,7 @@
 
 !SLIDE bullets incremental
 
-# Enter LevelDB
+# Bigger Data with LevelDB
 
 * Created by Google, BSD-licensed
 * On-disk ordered key-value store
@@ -37,7 +37,7 @@
 
 !SLIDE bullets incremental
 
-# Less Blocking
+# Problem: Blocking
 
 * Requests are serialized at vnodes
 * "Fold" requests blocked vnodes...
@@ -48,7 +48,7 @@
 
 !SLIDE bullets incremental
 
-# Worker Pools for Fold
+# Less Blocking: Worker Pools
 
 * Fold no longer block vnodes
 * Works from read-only snapshots
@@ -57,7 +57,7 @@
 
 !SLIDE bullets incremental
 
-# Clearer Choices
+# Problem: Too Many Backends
 
 * 0.14.x had 8 backends:
 * Bitcask, Innostore, DETS, Filesystem
@@ -71,14 +71,15 @@
 * 1.0 has 5 backends.
 * Removed DETS, Filesystem, GB Trees
 * ETS/Cache merged into "Memory" backend
-* Added LevelDB.
-* Innostore still shipped separately.
+* Added LevelDB
+* Innostore still shipped separately
 
 !SLIDES bullets incremental
 
 # Clearer Choices
 
 * **Memory**: for volatile information
-* **Bitcask**: for fast persistent read/write
+* **Bitcask**: for fast persistence
 * **LevelDB**: for large or ordered datasets
 * **Multi**: for more than one of the above
+* **Innostore**: if you can tune properly
