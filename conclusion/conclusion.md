@@ -21,6 +21,10 @@
 [info@basho.com](mailto:info@basho.com).
 * ![Basho](basho.gif)
 
-!SLIDE section
+!SLIDE section center
+
+## Thank you.
 
 # Questions?
+
+[riak-onedotoh-preview.heroku.com](http://riak-onedotoh-preview.heroku.com/)
