@@ -58,15 +58,3 @@ and to provide the opportunity for developers to create their own
 processing models on top.
 
 </div>
-
-!SLIDE center
-
-# Before
-
-![Legacy under load](legacy.png)
-
-!SLIDE center
-
-# After
-
-![Pipe under load](pipe.png)

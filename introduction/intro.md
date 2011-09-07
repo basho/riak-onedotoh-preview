@@ -13,9 +13,9 @@
 
 # Overview
 
-* Logging
-* Search
-* Backends
-* MapReduce
 * Secondary Indexes
+* Search
+* MapReduce
+* Logging
+* Backends
 * Core Improvements
