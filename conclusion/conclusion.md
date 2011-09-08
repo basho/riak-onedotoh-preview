@@ -2,7 +2,9 @@
 
 # Riak 1.0
 
-## Release in Late September
+## Prerelease available now!
+## Full release in late September
+
 
 !SLIDE bullets
 
