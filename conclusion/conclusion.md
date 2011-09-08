@@ -10,9 +10,9 @@
 
 # Riak 1.0
 
+* A complete, stable platform
 * More dev-friendly
 * More ops-friendly
-* Even more stable
 * Feature-rich
 
 !SLIDE bullets

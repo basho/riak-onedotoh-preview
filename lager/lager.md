@@ -61,10 +61,11 @@ timestamp [log level] <pid> message
 
 <div class="notes hidden">
 
-The default configuration for Riak sets up three log files (console,
-error, and crash). The `run_erl` program will still output to the regular
-`log/erlang.log.N` files but these can be ignored (there is no way to
-disable logging from `run_erl`).
+<p>The default configuration for Riak sets up three log files
+(console, error, and crash). The <code>run_erl</code> program will
+still output to the regular <code>log/erlang.log.N</code> files but
+these can be ignored (there is no way to disable logging from
+<code>run_erl</code>). </p>
 
 </div>
 
@@ -77,11 +78,13 @@ disable logging from `run_erl`).
 
 <div class="notes hidden">
 
-If a log file is moved or deleted, Lager will reopen or recreate
+<p>If a log file is moved or deleted, Lager will reopen or recreate
 the file and continue logging. A manual rotation process might look as
-follows:
+follows:</p>
 
+<pre>
     mv error.log error.log.$(date +%Y%m%d)
+</pre>
 
 </div>
 
@@ -99,14 +102,14 @@ follows:
 
 <div class="notes hidden">
 
-Built-in log rotation requires a simple change to app.config.
+<p>Built-in log rotation requires a simple change to app.config.</p>
 
-Runtime log level changes require attaching to the console and issuing
-erlang commands.
+<p>Runtime log level changes require attaching to the console and issuing
+erlang commands.</p>
 
-There is also the backend
-[lager_syslog](https://github.com/basho/lager_syslog) that allows
-lager to send messages to syslog. This backend, however, is not
-bundled with Riak and would require less than trivial steps to enable.
+<p>There is also the backend <code>lager_syslog</code> (under the
+basho github account) that allows lager to send messages to
+syslog. This backend, however, is not bundled with Riak and would
+require less than trivial steps to enable.</p>
 
 </div>
